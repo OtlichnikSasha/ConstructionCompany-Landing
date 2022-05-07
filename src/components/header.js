@@ -1,7 +1,6 @@
 import React from 'react';
-import {Link, NavLink} from "react-router-dom";
 
-const Header = () => {
+export const Header = () => {
     return (
         <header className="header">
             <div className="header_container">
@@ -31,15 +30,9 @@ const Header = () => {
                     </a>
                 </nav>
                 <div className="mobile_menu_place">
-                        <span>
-
-                        </span>
-                        <span>
-
-                        </span>
-                        <span>
-
-                        </span>
+                        <span />
+                        <span />
+                        <span />
                 </div>
                 <div className="header_phone_place">
                     <a className="yellow_btn" href="tel: +7 (999) 999-99-99">
@@ -51,4 +44,3 @@ const Header = () => {
     );
 };
 
-export default Header;

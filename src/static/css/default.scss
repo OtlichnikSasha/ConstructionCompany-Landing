@@ -11,7 +11,7 @@ $main_black: #111111;
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-thumb:vertical {
@@ -22,10 +22,12 @@ body{
   background: $main_black;
   overflow-x: hidden;
   color: #FFF;
+  font-family: 'MuseoModerno', sans-serif;
 }
 a{
   color: #FFFFFF;
   text-decoration: none;
+  cursor: pointer;
   :focus{
     outline: none;
     color: #FFFFFF;
