@@ -20,7 +20,11 @@ import wooden_houses from '../static/img/wooden_houses.png'
 import combined_houses from '../static/img/combined_houses.png'
 import frame_houses from '../static/img/frame_houses.png'
 import half_timbered_houses from '../static/img/half-timbered_houses.png'
-
+import {Navigation, A11y, Pagination} from 'swiper';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
 import {SphereList} from "../components/sphereList";
 import {BenefitsList} from "../components/benefitsList";
 import {TechnologyList} from "../components/technologyList";
@@ -126,11 +130,37 @@ export const Index = () => {
                     <div className="main_section__data">
 
                     </div>
-                    <div className="main_section__slider">
-                        <div className="slider_background">
-                            <img src={main_slide} alt="main_slide" className="slider_img"/>
-                        </div>
-                    </div>
+                    <Swiper
+                        modules={[Navigation, A11y, Pagination]}
+                        slidesPerView={1}
+                        navigation
+                        scrollbar={{draggable: true}}
+                        pagination
+                    >
+                        <SwiperSlide>
+                            <div className="main_section__slider">
+                                <div className="slider_background">
+                                    <img src={main_slide} alt="main_slide" className="slider_img"/>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="main_section__slider">
+                                <div className="slider_background">
+                                    <img src={main_slide} alt="main_slide" className="slider_img"/>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="main_section__slider">
+                                <div className="slider_background">
+                                    <img src={main_slide} alt="main_slide" className="slider_img"/>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+
+                    </Swiper>
+
                 </div>
             </section>
             {/* Technology section */}

@@ -1,4 +1,6 @@
 import React from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faArrowUp} from "@fortawesome/free-solid-svg-icons";
 
 export const TechnologyList = ({technology}) => {
     return (
@@ -11,10 +13,15 @@ export const TechnologyList = ({technology}) => {
                     <img src={technology.img} alt={technology.name}/>
                 </div>
             </div>
+            <div className="more_btn_place">
+                {technology.details}
+            </div>
             <div className="more_btn">
+                <FontAwesomeIcon icon={faArrowUp}/>
                 <span>
                     Подробнее
                 </span>
+
             </div>
         </div>
     );
