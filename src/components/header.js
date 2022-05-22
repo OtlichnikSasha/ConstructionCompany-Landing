@@ -1,18 +1,42 @@
-import React from 'react';
-
+import React, {useEffect, useRef, useState} from 'react';
 export const Header = () => {
+    const menuRef = useRef(null)
+    const menuLogoRef = useRef(null)
+    const [changeActive, setChangeActive] = useState(true)
+    const menuHandler = () => {
+        menuRef.current.classList.toggle("_active")
+        menuLogoRef.current.classList.toggle("_active")
+        document.body.classList.toggle("hidden")
+    }
+
+    useEffect(() => {
+        if(changeActive) changeActiveLink()
+    }, [changeActive])
+
+    const activeLinkTrigger = () => setChangeActive(true)
+
+    const changeActiveLink = () => {
+        const links = document.getElementsByClassName("nav_link");
+        const actually_href = window.location.href.split("#");
+        for(let i = 0; i < links.length; i++){
+            let link = links[i];
+            let href = link.getAttribute("href")
+            if(`#${actually_href}` === href) {
+                link.classList.add("_active")
+                return setChangeActive(false)
+            }
+        }
+    }
+
     return (
         <header className="header">
             <div className="header_container">
                 <div className="header_logo_place">
                     <div className="logo_square">
-
+                        <h1>Строй дом</h1>
                     </div>
-                    <h1>
-                        Строй дом
-                    </h1>
                 </div>
-                <nav className="nav">
+                <nav className="nav" ref={menuRef} onClick={activeLinkTrigger}>
                     <a href="#main" className="nav_link">
                         Главная
                     </a>
@@ -29,7 +53,7 @@ export const Header = () => {
                         О компании
                     </a>
                 </nav>
-                <div className="mobile_menu_place">
+                <div className="mobile_menu_place" onClick={menuHandler} ref={menuLogoRef}>
                         <span />
                         <span />
                         <span />

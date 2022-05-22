@@ -17,12 +17,17 @@ $main_black: #111111;
 ::-webkit-scrollbar-thumb:vertical {
   background:$yellow;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body{
   background: $main_black;
   overflow-x: hidden;
   color: #FFF;
   font-family: 'MuseoModerno', sans-serif;
+}
+body.hidden{
+  overflow: hidden;
 }
 a{
   color: #FFFFFF;
@@ -38,4 +43,9 @@ a{
   display: block;
   margin: 0 auto;
   max-width: 1200px;
+}
+@media screen and (max-width: 1200px) {
+  .container{
+    padding: 0 5%;
+  }
 }

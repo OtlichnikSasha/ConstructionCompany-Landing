@@ -102,12 +102,14 @@ export const Index = () => {
         }
     ]
 
+    const pagination = {
+        clickable: true
+    }
     return (
         <>
             {/* Main section */}
-            <section className="main_section">
+            <section className="main_section" id="main">
                 <div className="container">
-
                     <div className="main_section__social">
                         <a className="social_item">
                             <FontAwesomeIcon icon={faMailchimp}/>
@@ -128,14 +130,15 @@ export const Index = () => {
                     </div>
 
                     <div className="main_section__data">
-
+                        СТРОИТЕЛЬСТВО И ОСНАЩЕНИЕ ДОМОВ ОТ “КОМФОРТ”
+                        ДО “ЭЛИТ” КЛАССА
                     </div>
                     <Swiper
                         modules={[Navigation, A11y, Pagination]}
                         slidesPerView={1}
                         navigation
                         scrollbar={{draggable: true}}
-                        pagination
+                        pagination={pagination}
                     >
                         <SwiperSlide>
                             <div className="main_section__slider">
@@ -160,22 +163,18 @@ export const Index = () => {
                         </SwiperSlide>
 
                     </Swiper>
-
                 </div>
             </section>
             {/* Technology section */}
-            <section className="technology_section">
+            <section className="technology_section" id="technology">
                 <div className="technology_section__data">
                     <div className="yellow_rectangle"/>
                     <div className="yellow_rectangle"/>
-
                     <div className="container_data">
                         <div className="heading">
                             ТЕХНОЛОГИИ СТРОИТЕЛЬСТВА
                         </div>
-                        <div className="black_line">
-
-                        </div>
+                        <div className="black_line" />
                         <div className="technology_item_place">
                             {technologies.map(technology => {
                                 return (
@@ -187,8 +186,7 @@ export const Index = () => {
                 </div>
             </section>
             {/* Sphere */}
-
-            <section className="sphere_section">
+            <section className="sphere_section" id="sphere">
                 <div className="container_data">
                     <div className="heading">
                         СФЕРА ДЕЯТЕЛЬНОСТИ
@@ -203,7 +201,7 @@ export const Index = () => {
                 </div>
             </section>
             {/* Benefits section */}
-            <section className="benefits_section">
+            <section className="benefits_section" id="benefits">
                 <div className="container_data">
                     <div className="heading">
                         Наши преимущества
@@ -220,7 +218,7 @@ export const Index = () => {
                 </div>
             </section>
             {/* About section */}
-            <section className="about_section">
+            <section className="about_section" id="about">
                 <div className="container_data">
                     <div className="heading">
                         О компании
@@ -241,8 +239,10 @@ export const Index = () => {
                         </div>
                     </div>
                     <div className="about_item">
-                        <div className="about_item__img_place">
+                        <div className="about_item__img_place second_img">
                             <img src={about2} alt="О компании"/>
+                            <div className="yellow_rectangle" />
+                            <div className="yellow_rectangle" />
                         </div>
                         <div className="about_item__data">
                             Мы обладаем патентом на уникальные технологии и умело сочетаем многолетний опыт с
@@ -253,7 +253,6 @@ export const Index = () => {
                     </div>
                 </div>
             </section>
-
         </>
     );
 };
