@@ -1,5 +1,7 @@
 import React from 'react';
 import main_slide from "../static/img/main_slide.png"
+import slide_2 from "../static/img/slide_2.jpg"
+import slide_3 from "../static/img/slide_3.jpg"
 import {faVk, faInstagram, faFacebook, faWhatsapp, faMailchimp} from '@fortawesome/free-brands-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import sphere1 from '../static/img/sphere1.png'
@@ -126,12 +128,11 @@ export const Index = () => {
                         <a className="social_item">
                             <FontAwesomeIcon icon={faVk}/>
                         </a>
-
                     </div>
 
                     <div className="main_section__data">
-                        СТРОИТЕЛЬСТВО И ОСНАЩЕНИЕ ДОМОВ ОТ “КОМФОРТ”
-                        ДО “ЭЛИТ” КЛАССА
+                        Строительство и оснащение домов от ”Комфорт”
+                        до “Элит” класса
                     </div>
                     <Swiper
                         modules={[Navigation, A11y, Pagination]}
@@ -150,14 +151,14 @@ export const Index = () => {
                         <SwiperSlide>
                             <div className="main_section__slider">
                                 <div className="slider_background">
-                                    <img src={main_slide} alt="main_slide" className="slider_img"/>
+                                    <img src={slide_2} alt="main_slide" className="slider_img"/>
                                 </div>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="main_section__slider">
                                 <div className="slider_background">
-                                    <img src={main_slide} alt="main_slide" className="slider_img"/>
+                                    <img src={slide_3} alt="main_slide" className="slider_img"/>
                                 </div>
                             </div>
                         </SwiperSlide>
@@ -213,8 +214,6 @@ export const Index = () => {
                             )
                         })}
                     </div>
-
-
                 </div>
             </section>
             {/* About section */}

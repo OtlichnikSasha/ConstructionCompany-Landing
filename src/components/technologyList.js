@@ -13,15 +13,16 @@ export const TechnologyList = ({technology}) => {
                     <img src={technology.img} alt={technology.name}/>
                 </div>
             </div>
-            <div className="more_btn_place">
-                {technology.details}
-            </div>
-            <div className="more_btn">
-                <FontAwesomeIcon icon={faArrowUp}/>
-                <span>
+            <div className="technology_item__details_place">
+                <div className="more_btn_place">
+                    {technology.details}
+                </div>
+                <div className="more_btn">
+                    <FontAwesomeIcon icon={faArrowUp}/>
+                    <span>
                     Подробнее
                 </span>
-
+                </div>
             </div>
         </div>
     );
