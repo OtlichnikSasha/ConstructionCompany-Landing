@@ -1,12 +1,8 @@
 import React from 'react';
 
-export const Loader = () => {
-    window.onload = () => {
-        document.body.classList.remove("hidden")
-    }
-
+export const Loader = (loading) => {
     return (
-        <section className="loader">
+        <section className={loading ? "loader _active" : "loader"}>
             <h2>Construction company landing</h2>
         </section>
     );

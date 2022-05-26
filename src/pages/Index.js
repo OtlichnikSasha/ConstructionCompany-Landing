@@ -138,8 +138,9 @@ export const Index = () => {
                         modules={[Navigation, A11y, Pagination]}
                         slidesPerView={1}
                         navigation
-                        scrollbar={{draggable: true}}
                         pagination={pagination}
+                        speed={800}
+                        loop={true}
                     >
                         <SwiperSlide>
                             <div className="main_section__slider">
@@ -179,7 +180,7 @@ export const Index = () => {
                         <div className="technology_item_place">
                             {technologies.map(technology => {
                                 return (
-                                    <TechnologyList technology={technology} key={technology.id}/>
+                                    <TechnologyList technology={technology} key={`technology-${technology.id}`}/>
                                 )
                             })}
                         </div>
@@ -195,7 +196,7 @@ export const Index = () => {
                     <div className="sphere_items_place">
                         {spheres.map(sphere => {
                             return (
-                                <SphereList sphere={sphere} key={sphere.id}/>
+                                <SphereList sphere={sphere} key={`sphere-${sphere.id}`}/>
                             )
                         })}
                     </div>
@@ -210,7 +211,7 @@ export const Index = () => {
                     <div className="benefits_place">
                         {benefits.map(advantage => {
                             return (
-                                <BenefitsList advantage={advantage}/>
+                                <BenefitsList advantage={advantage} key={`benefits-${advantage.id}`}/>
                             )
                         })}
                     </div>
@@ -240,7 +241,6 @@ export const Index = () => {
                     <div className="about_item">
                         <div className="about_item__img_place second_img">
                             <img src={about2} alt="О компании"/>
-                            <div className="yellow_rectangle" />
                             <div className="yellow_rectangle" />
                         </div>
                         <div className="about_item__data">
